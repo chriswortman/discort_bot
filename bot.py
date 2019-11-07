@@ -28,7 +28,6 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    print(client.servers)
 
 
 @client.event
@@ -40,7 +39,7 @@ async def on_message(message):
       await channel.send( 'Dong, motha fucka!')
    ### The magic
    if message.content.startswith('bobbyb'):
-      msg = get_random_quote().format(message)
+      msg = get_random_quote().format(message) 
 #      msg = "THANK THE GODS FOR BESSIE AND HER TITS"
       await channel.send(msg)
 
