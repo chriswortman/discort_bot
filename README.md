@@ -19,7 +19,6 @@ docker built -t discord_bot .
 docker run -d -e "discord_bot_token=<super_secret_token>" discord_bot
 ```
 
-
 ### What Next?
 
 - [x] create github actions flow to test container build process on server
