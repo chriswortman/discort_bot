@@ -7,30 +7,18 @@ on:
 
 jobs:
 
-  build_container:
+  deploy_container:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag discord_bot:test
-  clear_container:
-    runs-on: self-hosted
-    steps:
-    - uses: actions/checkout@v1
-    - name: stop and remove the old test container
+    - name: Run the Docker image
       run: |
         docker stop discord_bot_test
         docker rm discord_bot_test
-  list_container:
-    runs-on: self-hosted
-    steps:
-    - uses: actions/checkout@v1
     - name: List images
       run: docker image ls
-  run_container:
-    runs-on: self-hosted
-    steps:
-    - uses: actions/checkout@v1
     - name: Run the Docker image
       run: docker run -d -e $discord_bot_token --name discord_bot_test discord_bot:test 
       env:
