@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag discord_bot:prod
-    - name: Run the Docker image
+    - name: stop and remote old container
       run: |
         docker stop discord_bot_live
         docker rm discord_bot_live
