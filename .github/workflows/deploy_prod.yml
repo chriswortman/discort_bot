@@ -4,11 +4,14 @@ on:
   push:
     branches: 
       - master
+    paths-ignore:
+    - '*.md'
   pull_request:
     branches: 
       - master
+    paths-ignore:
+    - '*.md'
 jobs:
-
   deploy_container:
     runs-on: self-hosted
     steps:
