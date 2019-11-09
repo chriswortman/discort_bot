@@ -10,7 +10,7 @@ try:
    os.environ["discord_bot_token"]
 except KeyError: 
    print ("Please set the environment variable discord_bot_token")
-   sys.exit(1)
+   exit(1)
 
 print(os.environ["discord_bot_token"])
 secret_token = (os.environ["discord_bot_token"])
