@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run the Docker image
-      run: docker stop discord_bot_test && docker rm docker_bot_test
+      run: docker stop discord_bot_test && docker rm discord_bot_test
   list_container:
     runs-on: self-hosted
     steps:

@@ -15,6 +15,12 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag discord_bot:prod
+  clear_container:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run the Docker image
+      run: docker stop discord_bot_live && docker rm discord_bot_live
   list_container:
     runs-on: self-hosted
     steps:
@@ -26,6 +32,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run the Docker image
-      run: docker run -d -e $discord_bot_token discord_bot:prod
+      run: docker run -d -e $discord_bot_token --name discord_bot_live discord_bot:prod 
       env:
-        discord_bot_token: ${{ secrets.prod_discord_bot_token }}
+        discord_bot_token: ${{ secrets.test_discord_bot_token }}
