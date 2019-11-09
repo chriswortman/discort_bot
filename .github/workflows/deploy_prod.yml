@@ -20,12 +20,14 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run the Docker image
-      run: docker stop discord_bot_live && docker rm discord_bot_live
+      run: |
+      docker stop discord_bot_live
+      docker rm discord_bot_live
   list_container:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
-    - name: Build the Docker image
+    - name: List images
       run: docker image ls
   run_container:
     runs-on: self-hosted
