@@ -9,10 +9,6 @@ as well as setting up the bot user on your discord account on.
 
 https://discordapp.com/developers/applications/me
 
-## Running the bot
-
-python3 bot.py
-
 ## Running the bot with docker (recommended)
 
 Just getting my initial container out there, nothing fancy, just a ubuntu container with the files slapped in there. 
@@ -23,3 +19,10 @@ docker built -t discord_bot .
 docker run -d -e "discord_bot_token=<super_secret_token>" discord_bot
 ```
 
+
+### What Next?
+
+* create github actions flow to test container build process on server
+* create github action flow to deploy container on home server
+* improving quotes.json, adding more gifs.
+* improving readme... 
