@@ -4,12 +4,11 @@ on:
   push:
     branches: 
       - test_*
+
 jobs:
 
   build_container:
-
     runs-on: self-hosted
-
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
