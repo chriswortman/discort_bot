@@ -19,6 +19,14 @@ docker built -t discord_bot .
 docker run -d -e "discord_bot_token=<super_secret_token>" discord_bot
 ```
 
+### Test/Prod Workflows
+
+Github actions is going to provide mechanism to deploy this app to my self-hosted runner. 
+some guidelines.
+* 'test_" must prefix all of your branch names. 
+* only 1 'instance' of each enviornment will be availble at a time
+* after a branch 'passes' testing, create a pull request to merge it into master.
+
 ### What Next?
 
 - [x] create github actions flow to test container build process on server
