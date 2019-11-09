@@ -17,10 +17,10 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
-    - name: Run the Docker image
+    - name: stop and remove the old test container
       run: |
-      docker stop discord_bot_test
-      docker rm discord_bot_test
+        docker stop discord_bot_test
+        docker rm discord_bot_test
   list_container:
     runs-on: self-hosted
     steps:
