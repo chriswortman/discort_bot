@@ -26,3 +26,4 @@ docker run -d -e "discord_bot_token=<super_secret_token>" discord_bot
 * create github action flow to deploy container on home server
 * improving quotes.json, adding more gifs.
 * improving readme... 
+* creating the branch/merge workflow gating mechanism. 
