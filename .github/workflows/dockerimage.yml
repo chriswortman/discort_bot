@@ -24,6 +24,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run the Docker image
-      run: docker run -d -e discord_bot_token=$discord_bot_token discord_bot:test
+      run: docker run -d -e $discord_bot_token discord_bot:test
       env:
-        docker_bot_token: $${{ secrets.discord_bot_token }}
+        discord_bot_token: $${{ secrets.discord_bot_token }}
