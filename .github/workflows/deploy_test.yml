@@ -17,6 +17,7 @@ jobs:
       run: |
         docker stop discord_bot_test
         docker rm discord_bot_test
+      continue-on-error: true
     - name: List images
       run: docker image ls
     - name: Run the Docker image
