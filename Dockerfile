@@ -4,6 +4,6 @@ COPY bot.py /bot.py
 COPY quotes.json /quotes.json
 
 RUN apt-get update && apt-get install -y python3.8 python3-pip
-RUN python3 -m pip install discord.py
+RUN python3 -m pip install discord.py discordhealthcheck
 CMD python3 bot.py
 

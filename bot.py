@@ -1,4 +1,5 @@
 import discord
+import discordhealthcheck
 import asyncio
 import os
 import json
@@ -42,5 +43,10 @@ async def on_message(message):
       msg = get_random_quote().format(message) 
 #      msg = "THANK THE GODS FOR BESSIE AND HER TITS"
       await channel.send(msg)
+
+
+@client.event
+async def on_ready():
+    print("Logged in")
 
 client.run(secret_token)
