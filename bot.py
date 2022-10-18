@@ -48,5 +48,6 @@ async def on_message(message):
 @client.event
 async def on_ready():
     print("Logged in")
+    exit
 
 client.run(secret_token)
