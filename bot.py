@@ -6,6 +6,7 @@ import json
 import random
 
 client = discord.Client()
+discordhealthcheck.start(client)
 
 try:  
    os.environ["discord_bot_token"]
@@ -48,6 +49,6 @@ async def on_message(message):
 @client.event
 async def on_ready():
     print("Logged in")
-    exit(1)
+
 
 client.run(secret_token)
